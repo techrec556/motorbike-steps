@@ -16,7 +16,15 @@
     .w3-black {background-color: white !important; color: black;}
     .w3-hover-green:hover {background-color: #00FF00 !important;}
     .w3-bar-item.w3-button {color: black !important;} /* Set all bar items to black text */
-    .fa-motorcycle {font-size: 180px}
+    .fa-motorcycle {font-size: 180px;}
+    
+    /* Styles for the burger menu */
+    #navDemo {
+      background-color: #66FF66; /* Slightly darker green for the menu */
+    }
+    #navDemo a {
+      color: black !important; /* Ensure text is black in the menu */
+    }
   </style>
 </head>
 <body>
@@ -33,7 +41,7 @@
   </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-large">
+  <div id="navDemo" class="w3-bar-block w3-hide w3-large">
     <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="reloadPage()">Home</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Security</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Safety</a>
