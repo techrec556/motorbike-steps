@@ -15,6 +15,7 @@
     .w3-white {background-color: black !important;}
     .w3-black {background-color: white !important; color: black;}
     .w3-hover-green:hover {background-color: #00FF00 !important;}
+    .w3-bar-item.w3-button {color: black !important;} /* Set all bar items to black text */
     .fa-motorcycle {font-size: 180px}
   </style>
 </head>
@@ -23,11 +24,21 @@
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card w3-large">
-    <a class="w3-bar-item w3-button w3-hover-green" href="javascript:void(0);" onclick="reloadPage()">Home</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-green">Security</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-green">Safety</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-green">Comfort</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-green">Practicality</a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-green" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-green" onclick="reloadPage()">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-green">Security</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-green">Safety</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-green">Comfort</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-green">Practicality</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="reloadPage()">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Security</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Safety</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Comfort</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Practicality</a>
   </div>
 </div>
 
@@ -83,6 +94,16 @@
 // Reloads the page when "Home" is clicked
 function reloadPage() {
   location.reload();
+}
+
+// Toggle menu on small screens when clicking on the menu button
+function toggleFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 </script>
 
