@@ -25,6 +25,20 @@
       color: black !important; /* Ensure text is black in the menu */
     }
   </style>
+  <script>
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-hide") == -1) {
+        x.className += " w3-hide";
+      } else {
+        x.className = x.className.replace(" w3-hide", "");
+      }
+    }
+
+    function reloadPage() {
+      location.reload();
+    }
+  </script>
 </head>
 <body>
 
@@ -55,7 +69,6 @@
 <header class="w3-container w3-red w3-center" style="padding:100px 16px">
   <h1 class="w3-jumbo">Tenere 700 Mods</h1>
   <p class="w3-xlarge">Explore my plans for upgrading the ultimate adventure bike</p>
-  <button class="w3-button w3-black w3-padding-large w3-hover-green">Get Started</button>
 </header>
 
 <!-- Content Section -->
@@ -123,6 +136,4 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-black w3-center w3-padding-64">
-  <div class="w3-xlarge w3-padding-32">
-    <
+<footer class="w
